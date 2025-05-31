@@ -6,7 +6,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 // app.use(cors({
