@@ -13,7 +13,7 @@ const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 //   origin: 'http://localhost:5173'  // Or '*' during development
 // }));
 app.use(cors({ origin: 'https://maalu.org' }));
-
+app.use(express.json());
 app.get('/geocode', async (req, res) => {
   const address = req.query.address;
   if (!address) {
